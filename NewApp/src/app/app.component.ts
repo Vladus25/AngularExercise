@@ -1,17 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MioComponenteComponent } from './components/mio-componente/mio-componente.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  template: `
-    <app-child (buttonClicked)="onButtonClicked()"></app-child>
-    <p *ngIf="buttonWasClicked">Hai cliccato il pulsante!</p>
-  `,
 })
 export class AppComponent {
   title = 'NewApp';
   nome :string = "Carlo";
   eventi :string = "Evento";
+  datoChild= {nome: "pasquale"}
+
+  @ViewChild(MioComponenteComponent) child!: MioComponenteComponent;
+
+  SalutaFiglio(){
+    this.child.salutaConNome(this.nome);
+  }
+
+  logEvento(e:any){
+    console.log(e);
+  }
 
 }

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MioComponenteComponent } from './components/mio-componente/mio-componente.component';
 import { ComponeneteInputComponent } from './components/componenete-input/componenete-input.component';
 import { ComponeneteOutputComponent } from './components/componenete-output/componenete-output.component';
+import { ButtoneComponent } from './components/buttone/buttone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MioComponenteComponent,
     ComponeneteInputComponent,
-    ComponeneteOutputComponent
+    ComponeneteOutputComponent,
+    ButtoneComponent
   ],
   imports: [
     BrowserModule,

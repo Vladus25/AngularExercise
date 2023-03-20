@@ -1,8 +1,13 @@
-<app-componenete-input>
+<app-componenete-input [dato] = "nome">
   <app-componenete-output></app-componenete-output>
 </app-componenete-input>
 
-<!-- <app-componenete-input [dato] = "nome">
+<app-buttone (clickBottone)="logEvento($event)" [dato2]="datoChild"></app-buttone>
 
-</app-componenete-input> -->
+<app-mio-componente>Ng-content grazie ad lui vedi questo testo</app-mio-componente>
+<app-mio-componente #am></app-mio-componente>
+
+<p>{{am.saluta()}}</p>
+<button (click)="SalutaFiglio()"></button>
+
 

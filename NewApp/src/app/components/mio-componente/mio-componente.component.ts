@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MioComponenteComponent {
 
+  saluta(){
+    console.log("Ciao a tutti");
+  }
+
+  salutaConNome(nome : string){
+    console.log("Ciao sono:" + nome);
+  }
 }
