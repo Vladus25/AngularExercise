@@ -1,11 +1,13 @@
 <h1>componente-Padre</h1>
 <div>
-  <button type="button" class="btn btn-warning" (click)="CurrentDate()">Data</button>
+  <p>Buttone per sapere la data di Oggi</p>
+  <button type="button" class="btn btn-warning" (click)="CurrentDate()">Click</button>
 </div>
 <!-- Passiamo tramite ng-content la funzione Buongiorno grazie ad "#ap" dopo il click in console si stampa il risulatato della funzione -->
-<app-child #ap [names] = "Nomi" (selected)="onNameSelected($event)">
-  <div >
-    <button type="button" class="btn btn-success mb-1" (click)="ap.buongiorno()">Saluto</button>
+<app-child [names] = "Nomi" (selected)="onNameSelected($event)" #ap>
+  <div>
+    <p>Buttone per dare un Buongiorno</p>
+    <button type="button" class="btn btn-success" (click)="ap.buongiorno()">Click</button>
   </div>
 </app-child>
 
