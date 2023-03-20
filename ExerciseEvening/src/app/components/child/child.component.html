@@ -1,1 +1,28 @@
-<p>child works!</p>
+<h2>componente-Figlio</h2>
+<!-- usiamo la ngfor per prendere tutti i dati che ci sono nell array di padre visualizare id sulla pagina ed affianco un bottone che stampa id ed nome -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nome of names">
+      <td scope="col">{{ nome.id }}</td>
+      <td scope="col"><button type="button" class="btn btn-info" (click)="onNameSelected(nome)">Select</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- In questa sezione viene stampata il contenuto che si trova nel component padre -->
+<Ng-content></Ng-content>
+
+
+<!-- <ul>
+  <li *ngFor="let nome of names">
+    {{ nome.id }}
+    <button (click)="onNameSelected(nome)">Select</button>
+  </li>
+</ul> -->
+
