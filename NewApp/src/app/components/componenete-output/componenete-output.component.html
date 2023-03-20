@@ -1,0 +1,7 @@
+<h2>componenete-output(Figlio)</h2>
+<ul>
+  <li *ngFor="let nome of names">
+    {{ nome.name }}
+    <button (click)="onNameSelected(nome)">Select</button>
+  </li>
+</ul>
