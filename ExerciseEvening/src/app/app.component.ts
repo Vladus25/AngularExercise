@@ -14,7 +14,7 @@ export class AppComponent {
   Nomi = [
     { id: 1, name: 'Carlo' },
     { id: 2, name: 'Paola' },
-    { id: 3, name: 'Vittorio' },
+    { id: 3, name: 'Vittorio' }
   ];
 
   onNameSelected(Object: string) {
